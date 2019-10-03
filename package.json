@@ -1,4 +1,6 @@
 {
-    "name": "com.cmtv.data-persistence",
-    "version": "1.0.0"
+  "name": "com.cmtv.data-persistence",
+  "version": "0.1.0",
+  "displayName": "Data Persistence",
+  "hideInEditor": false
 }
