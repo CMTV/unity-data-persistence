@@ -13,6 +13,8 @@ namespace CMTV.DataPersistence
 
         public static void Save(string path, object data)
         {
+            Directory.CreateDirectory(Path.GetDirectoryName(GetPath(path)));
+
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(GetPath(path), FileMode.OpenOrCreate);
 
