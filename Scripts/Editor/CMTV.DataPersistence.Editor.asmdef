@@ -1,0 +1,16 @@
+{
+    "name": "CMTV.DataPersistence.Editor",
+    "references": [
+        "GUID:8be2a99d100845b4b89de801e2a3d991"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
