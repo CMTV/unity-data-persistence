@@ -6,16 +6,37 @@ namespace CMTV.DataPersistence
     {
         public abstract string Path { get; }
 
+        #region Defaults
+
+        bool defaultsCached = false;
+        TSingletonData defaults;
+
         public TSingletonData Defaults
         {
             get
             {
-                var defaultData = new TSingletonData();
-                defaultData.InitDefaults();
+                if (!defaultsCached)
+                {
+                    defaults = new TSingletonData();
+                    defaults.InitDefaults();
 
-                return defaultData;
+                    defaultsCached = true;
+                }
+
+                return defaults;
             }
         }
+
+        public TSingletonData NewDefaults
+        {
+            get
+            {
+                defaultsCached = false;
+                return Defaults;
+            }
+        }
+
+        #endregion
 
         protected abstract void InitData(TSingletonData data);
         protected abstract void InitSelf(TSingletonData data);
